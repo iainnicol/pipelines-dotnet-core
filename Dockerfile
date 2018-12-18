@@ -1,4 +1,6 @@
-FROM microsoft/windowsservercore
+FROM debian:jessie
+
+# FROM microsoft/windowsservercore
 #WORKDIR /app
 #COPY dummyfile .
 
