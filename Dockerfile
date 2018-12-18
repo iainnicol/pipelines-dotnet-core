@@ -1,4 +1,6 @@
-FROM debian:jessie
+FROM mcr.microsoft.com/windows/servercore:1709
+
+# FROM debian:jessie
 
 # FROM microsoft/windowsservercore
 #WORKDIR /app
