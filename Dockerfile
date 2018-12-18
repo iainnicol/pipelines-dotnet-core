@@ -1,4 +1,7 @@
-FROM mcr.microsoft.com/windows/servercore:1803
+#FROM microsoft/windowsservercore
+#WORKDIR /app
+#COPY dummyfile .
 
-WORKDIR /app
-COPY dummyfile .
+FROM microsoft/nanoserver:1803
+COPY dummyfile.txt C:
+CMD ["cmd", "/C", "type C:\\dummyfile.txt"]
