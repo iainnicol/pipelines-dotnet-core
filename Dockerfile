@@ -9,5 +9,5 @@ FROM microsoft/windowsservercore:ltsc2016
 #COPY dummyfile .
 
 #FROM microsoft/nanoserver:1803
-#COPY dummyfile.txt C:
-#CMD ["cmd", "/C", "type C:\\dummyfile.txt"]
+COPY dummyfile.txt C:
+CMD ["cmd", "/C", "type C:\\dummyfile.txt"]
