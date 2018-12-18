@@ -3,16 +3,16 @@ pool:
   vmImage: 'win1803'
 
 steps:
-- script: |
+- powershell: |
     echo "about to login"
     # echo $AUTH | docker login -u iain2 --password-stdin
     docker login -u iain2 -p "$AUTH"
     
     echo "about to build"
-    docker build -f Dockerfile -t registry.gitlab.com/iain2/containerz .
+    docker build -f Dockerfile -t registry.gitlab.com/iain2/containerz:nanohello .
     
     echo "about to push"
-    docker push registry.gitlab.com/iain2/containerz
+    docker push registry.gitlab.com/iain2/containerz:nanohello
     
     echo "yaml pipeline done"
   env:
