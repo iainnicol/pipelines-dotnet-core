@@ -6,8 +6,8 @@ steps:
 - powershell: |
     echo "about to login"
     # echo $env:AUTH | docker login -u iain2 --password-stdin
-    echo docker login -u iain2 -p "$env:AUTH"
-    docker login -u iain2 -p "$env:AUTH"
+    echo "docker login -u iain2 -p $env:AUTH"
+    docker login -u iain2 -p $env:AUTH
     
     echo "about to build"
     docker build -f Dockerfile -t registry.gitlab.com/iain2/containerz:nanohello .
