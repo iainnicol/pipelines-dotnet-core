@@ -7,6 +7,8 @@ steps:
 - powershell: |
     echo "about to pull"
     # docker build -f Dockerfile -t registry.gitlab.com/iain2/containerz:nanohello .
+    docker pull mcr.microsoft.com/windows/servercore:ltsc2016
+    echo "about to tag"
     docker tag mcr.microsoft.com/windows/servercore:ltsc2016 registry.gitlab.com/iain2/containerz:nanohello
     
     echo "about to login"
