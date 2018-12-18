@@ -1,4 +1,5 @@
-FROM mcr.microsoft.com/windows/servercore:1709
+# FROM mcr.microsoft.com/windows/servercore:1709
+FROM microsoft/dotnet-framework:4.7.1-runtime-20181211-windowsservercore-1709
 
 # FROM debian:jessie
 
