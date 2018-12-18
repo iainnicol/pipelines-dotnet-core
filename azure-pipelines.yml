@@ -6,6 +6,7 @@ steps:
 - powershell: |
     echo "about to login"
     # echo $AUTH | docker login -u iain2 --password-stdin
+    echo "AUTH: $AUTH. $env:AUTH"
     docker login -u iain2 -p "$AUTH"
     
     echo "about to build"
