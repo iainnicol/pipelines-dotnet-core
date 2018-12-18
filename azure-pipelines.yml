@@ -5,13 +5,13 @@ pool:
 
 steps:
 - powershell: |
-    echo "about to login"
-    # echo $env:AUTH | docker login -u iain2 --password-stdin registry.gitlab.com
-    docker login -u iain2 -p $env:AUTH registry.gitlab.com
-    
     echo "about to pull"
     # docker build -f Dockerfile -t registry.gitlab.com/iain2/containerz:nanohello .
     docker tag mcr.microsoft.com/windows/servercore:ltsc2016 registry.gitlab.com/iain2/containerz:nanohello
+    
+    echo "about to login"
+    # echo $env:AUTH | docker login -u iain2 --password-stdin registry.gitlab.com
+    docker login -u iain2 -p $env:AUTH registry.gitlab.com    
     
     echo "about to push"
     docker push registry.gitlab.com/iain2/containerz:nanohello
