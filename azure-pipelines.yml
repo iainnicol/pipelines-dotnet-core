@@ -4,7 +4,7 @@ pool:
 
 steps:
 - script: |
-    docker login -u iain2 -p $AUTH registry.gitlab.com
+    echo $AUTH | docker login -u iain2 --password-stdin
     docker build -f Dockerfile -t registry.gitlab.com/iain2/containerz .
     docker push registry.gitlab.com/iain2/containerz
   env:
