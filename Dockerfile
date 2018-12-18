@@ -1,7 +1,7 @@
-#FROM microsoft/windowsservercore
+FROM microsoft/windowsservercore
 #WORKDIR /app
 #COPY dummyfile .
 
-FROM microsoft/nanoserver:1803
-COPY dummyfile.txt C:
-CMD ["cmd", "/C", "type C:\\dummyfile.txt"]
+#FROM microsoft/nanoserver:1803
+#COPY dummyfile.txt C:
+#CMD ["cmd", "/C", "type C:\\dummyfile.txt"]
